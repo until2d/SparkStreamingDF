@@ -5,9 +5,8 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.streaming._
 import org.apache.spark.sql.types._
 
-object SparkStream {
+object SparkStream extends App {
 
-  def Main(args: Array[String]): Unit = {
     val spark = SparkSession
     .builder
     .master("local[*]")
@@ -17,6 +16,4 @@ object SparkStream {
     println ("Hello Spark")
 
     spark.stop
-
-  }
 }
